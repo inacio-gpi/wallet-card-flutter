@@ -12,7 +12,28 @@ class SplashPage extends StatelessWidget {
       body: Stack(
         children: [
           Center(child: Image.asset(AppImages.union)),
-          Center(child: Image.asset(AppImages.logoFull)),
+          Positioned(
+            top: 100,
+            left: 50,
+            child: Image.asset(AppImages.logoFull),
+          ),
+          Positioned(
+            top: 200,
+            left: 50,
+            child: ClipRRect(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+                bottomLeft: Radius.circular(20),
+              ),
+              // all(Radius.circular(50)),
+              child: Container(
+                height: 180,
+                width: 250,
+                color: Color(0x80cc1515),
+              ),
+            ),
+          )
         ],
       ),
     );
