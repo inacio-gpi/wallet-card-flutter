@@ -59,14 +59,19 @@ class _HomePageState extends State<HomePage> {
           builder: (context, snapshot) {
             return Column(
               children: [
-                const SizedBox(height: 30),
-                ElevatedButton(
-                  // style: ElevatedButton.styleFrom(
-                  //   textStyle: const TextStyle(fontSize: 30),
-                  // ),
-
-                  onPressed: () {},
-                  child: const Text('Enabled'),
+                // const SizedBox(height: 30),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(double.infinity, 50),
+                      // padding: EdgeInsets.symmetric(horizontal: 100),
+                      textStyle: const TextStyle(fontSize: 22),
+                    ),
+                    onPressed: () {},
+                    child: const Text('adicionar cartão'),
+                  ),
                 ),
                 Expanded(
                   child: ListView.builder(
