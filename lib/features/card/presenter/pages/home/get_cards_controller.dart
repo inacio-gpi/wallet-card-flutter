@@ -14,7 +14,8 @@ class GetCardsController extends ValueNotifier<List<CardEntity>> {
     return result.fold(
       (failure) => value = [],
       (cards) {
-        value = [...cards];
+        value = cards;
+        print(toString());
       },
     );
   }
